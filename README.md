@@ -43,7 +43,11 @@ The above is an example on how to run the module to extract the data. Replace in
 
 Then use the get_response method to get the final dictionary with the extracted data.
 
-##### command to run in terminal : 
+```python
+    print(logs_dict_instance.get_response())
+```
+
+##### command to run the module in terminal : 
 ```bash
 python file_name.py
 ```
