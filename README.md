@@ -43,6 +43,11 @@ The above is an example on how to run the module to extract the data. Replace in
 
 Then use the get_response method to get the final dictionary with the extracted data.
 
+##### command to run in terminal : 
+```bash
+python file_name.py
+```
+
 ## Details of the module
 
 The LogsDict class is used to get the dictionary which has the extracted data from the logs/input string.
