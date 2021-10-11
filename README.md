@@ -26,6 +26,19 @@ No special installation required other than python. Requirements.txt is also not
 ```bash
 Python 3.8.1
 ```
+##### Create the virtual Environment :
+```python
+python3 -m venv env_name
+```
+To activate it :
+1. For Windows:
+```python
+env_name\Scripts\activate
+```
+2. For Unix or MacOS :
+```python
+source env_name/bin/activate
+```
 
 ## Running Guidelines
 
