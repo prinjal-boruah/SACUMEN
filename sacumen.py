@@ -1,4 +1,13 @@
 import re
+import time
+
+"""{'cat': 'C2', 'cs1Label': 'subcat', 'cs1': 'DNS_TUNNELING', 
+'cs2Label': 'vueUrls', 'cs2': 'https://aws-dev.sacdev.io/alerts?filter=alertId%3D%3D81650', 
+'cs3Label': 'Tags', 'cs3': 'USA,Finance', 'cs4Label': 'Url', 
+'cs4': 'https://aws-dev.sacdev.io/settings/tir?rules.sort=4%3A1&filter=state%3D%3D2&selected=9739323', 
+'cn1Label': 'severityScore', 'cn1': '900', 
+'msg': 'Malicious activity was reported in CAAS\=  A threat intelligence rule has been automatically created in DAAS.', 
+'dhost': 'bad.com', 'dst': '1.1.1.1'}"""
 
 class LogsDict():
 
@@ -57,7 +66,10 @@ class LogsDict():
 
 if __name__ == "__main__":
     #test below
-    
+
+    start_time = time.time()
+    # inp_str = "PYxCD9zrELI5GrKVvNmIm5dbONQdwtIVEZCcat=uIso1THOwWZS6lTdDGear5NgWaaXpM0K8acat=hkc3JXjTGxw"
     inp_str = "SAC:0|Sacumen|CAAS|2021.2.0|3|MALICIOUS|High|cat=C2 cs1Label=subcat cs1=DNS_TUNNELING cs2Label=vueUrls cs2=https://aws-dev.sacdev.io/alerts?filter=alertId%3D%3D81650 cs3Label=Tags cs3=USA,Finance cs4Label=Url cs4=https://aws-dev.sacdev.io/settings/tir?rules.sort=4%3A1&filter=state%3D%3D2&selected=9739323 cn1Label=severityScore cn1=900 msg=Malicious activity was reported in CAAS\= A threat intelligence rule has been automatically created in DAAS. dhost=bad.com dst=1.1.1.1"
-    logs_dict_instance = LogsDict(inp_str)
-    print(logs_dict_instance.get_response())
+    logs_dict_instance = LogsDict(5)
+    print(logs_dict_instance.get_response())    
+    print("--- %s seconds ---" % (time.time() - start_time))
